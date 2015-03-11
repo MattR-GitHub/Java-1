@@ -1,0 +1,41 @@
+public class VariableDisplay {
+    public static void main(String[] args) {
+  
+	int myInteger = 0;  // an int variable
+        double myDoubleUp1, myDoubleUp2;  // two doubles
+        String myString;  // a string
+        
+        myDoubleUp1 = 1.2345;
+        myDoubleUp2 = 9.8765432;
+        myString = "This is the string stored in myString.";
+	
+	String intString = "99";
+         String floatString = "99.999";
+         int intVariable;
+	double doubleVariable;
+        
+        System.out.print("The value in my int variable is ");
+        System.out.println(myInteger);
+        System.out.print("/nThe value in my double variables are ");
+        System.out.print(myDoubleUp1);
+        System.out.print(" and ");
+        System.out.println(myDoubleUp2);
+        System.out.print("/nThe value in my String variable is \"");
+        System.out.print(myString);
+        System.out.println("\".");
+	
+	// stores 99 into intVariable then displays it
+         intVariable = Integer.parseInt(intString);
+         System.out.println(intVariable);
+
+         // stores 99.999 into doubleVariable
+         doubleVariable = Double.parseDouble(floatString);
+         System.out.println(doubleVariable);
+
+          // displays largest int Value
+          System.out.println(Integer.MAX_VALUE);
+
+          // stores then displays largest double value
+           doubleVariable = Double.MAX_VALUE;
+          System.out.println(doubleVariable);
+    }
