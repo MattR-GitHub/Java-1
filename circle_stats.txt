@@ -1,0 +1,38 @@
+import java.util.Scanner;                        /** Scanner Class imported*/
+/**allows us to read in numeric values from either the keyboard or file without having to convert them from strings and determine if there are more values to be read.*/
+                                                          
+							    /** class declaration */
+public class CircleStats {
+    private double radius;                       /** variable declaration */
+    
+                                                 /** method declaration */
+    public static void main(String[] args) {
+        double inputRadius;
+        Scanner keyInput = new Scanner(System.in);
+        
+        System.out.print("Enter the radius for your circle: ");
+        inputRadius = keyInput.nextDouble();                /** What is nextDouble .. */
+        CircleStats r = new CircleStats(inputRadius);      /** why say new  if not a new class and an already assigned value..*/
+                                                                          
+        System.out.println(r.toString());                 /** why not System.out.println(inputRadius.toString()); */
+    
+	    
+	   /** System.out.println("Enter your username: ");
+                      Scanner scanner = new Scanner(System.in);
+                       String username = scanner.nextLine();
+		   System.out.println("Your username is " + username); */
+	   
+	    }
+
+    /** Constructor for objects of class CircleStats  */
+     public CircleStats(double r) {
+        // handoff from line input to another var
+        radius = r;                                   
+    }
+
+    /** toString calculates & prints the circle's stats */
+     public String toString() {
+        return "The circle's radius is " + radius + "\n" +
+               "The circle's circumference is " + (2.0 * Math.PI * radius) + "\n" +
+               "The circle's area is " + (Math.PI * radius * radius) + "\n" +
+               "The surface area of a sphere with the same radius is " + (4.0 * Math.PI * radius * radius) + "\n";
